@@ -24,6 +24,10 @@ describe('User Controller', () => {
     testService = app.get(TestService);
   });
 
+  afterEach(async () => {
+    testService.deleteAll();
+  });
+
   describe('POST /api/users', () => {
     beforeEach(async () => {
       await testService.deleteUser();

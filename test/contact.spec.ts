@@ -24,6 +24,10 @@ describe('Contact Controller', () => {
     testService = app.get(TestService);
   });
 
+  afterEach(async () => {
+    testService.deleteAll();
+  });
+
   describe('POST /api/contacts', () => {
     beforeEach(async () => {
       await testService.deleteContact();

@@ -10,7 +10,7 @@ import {
 } from '../model/contact.model';
 import { ValidationService } from '../common/validation.service';
 import { ContactValidation } from './contact.validation';
-import { WebResponse } from 'src/model/web.model';
+import { WebResponse } from '../model/web.model';
 
 @Injectable()
 export class ContactService {
