@@ -1,0 +1,124 @@
+### Register
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username": "otong",
+    "name": "Otong Surotong",
+    "password": "otong123"
+}
+
+### Login
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username": "otong",
+    "password": "otong12345"
+}
+
+### Get User
+GET http://localhost:3000/api/users/current
+Accept: application/json
+Authorization: 6fc0e45d-9a07-4566-8a05-f74fd2140a24
+
+### Logout User
+DELETE  http://localhost:3000/api/users/logout
+Accept: application/json
+Authorization: 6fc0e45d-9a07-4566-8a05-f74fd2140a24
+
+### Update User
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 6fc0e45d-9a07-4566-8a05-f74fd2140a24
+
+{
+    "password": "otong12345"
+}
+
+### Create Contact
+POST http://localhost:3000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 6fc0e45d-9a07-4566-8a05-f74fd2140a24
+
+{
+    "first_name": "Kuah",
+    "last_name": "Kyuning",
+    "email": "kuahx@test.com",
+    "phone": "081999233332"
+}
+
+### Update Contact
+PUT http://localhost:3000/api/contacts/215
+Content-Type: application/json
+Accept: application/json
+Authorization: 6fc0e45d-9a07-4566-8a05-f74fd2140a24
+
+{
+    "first_name": "Ucup",
+    "last_name": "Surucup",
+    "email": "ucup@royal.com",
+    "phone": "08123434"
+}
+
+### Get Contact
+GET http://localhost:3000/api/contacts/215
+Accept: application/json
+Authorization: 6fc0e45d-9a07-4566-8a05-f74fd2140a24
+
+### Remove Contact
+DELETE http://localhost:3000/api/contacts/215
+Accept: application/json
+Authorization: 6fc0e45d-9a07-4566-8a05-f74fd2140a24
+
+### Search Contact
+GET http://localhost:3000/api/contacts?size=1&page=3
+Accept: application/json
+Authorization: 6fc0e45d-9a07-4566-8a05-f74fd2140a24
+
+### Create Address
+POST http://localhost:3000/api/contacts/216/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: 6fc0e45d-9a07-4566-8a05-f74fd2140a24
+
+{
+    "street": "Jalan Cake",
+    "city": "Kota Sandwitch",
+    "province": "Bread",
+    "country": "Food",
+    "postal_code": "2323"
+}
+
+### Get Address
+GET http://localhost:3000/api/contacts/216/addresses/110
+Accept: application/json
+Authorization: 6fc0e45d-9a07-4566-8a05-f74fd2140a24
+
+### Remove Address
+DELETE http://localhost:3000/api/contacts/216/addresses/109
+Accept: application/json
+Authorization: 6fc0e45d-9a07-4566-8a05-f74fd2140a24
+
+### List Address
+GET http://localhost:3000/api/contacts/216/addresses
+Accept: application/json
+Authorization: 6fc0e45d-9a07-4566-8a05-f74fd2140a24
+
+### Update Address
+PUT http://localhost:3000/api/contacts/216/addresses/111
+Content-Type: application/json
+Accept: application/json
+Authorization: 6fc0e45d-9a07-4566-8a05-f74fd2140a24
+
+{
+    "street": "Jalan Slay",
+    "city": "Kota Sandwitch",
+    "province": "Bread",
+    "country": "Food",
+    "postal_code": "2323"
+}
